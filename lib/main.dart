@@ -7,21 +7,32 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  String name = "Mitch Koko";
-  int age = 22;
-  double pi = 3.14159;
-  bool isBeginner = true;
-
-  List<String> names = ["Mitch", "Sharon", "Vince", "Vince"];
-
-  Set<String> uniqueNames = {"Mitch", "Sharon", "Vince"};
-
-  Map user = {'name': "Mitch Koko", 'age': 27, 'height': 180};
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(user['age']);
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Scaffold());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.deepPurple[200],
+        appBar: AppBar(
+          title: Text("My App"),
+          backgroundColor: Colors.deepPurple,
+          elevation: 0,
+          leading: Icon(Icons.menu),
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+        ),
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: EdgeInsets.all(25),
+            child: Icon(Icons.favorite, color: Colors.white, size: 64),
+          ),
+        ),
+      ),
+    );
   }
 }
