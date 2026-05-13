@@ -13,13 +13,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          title: Text("My App"),
-          backgroundColor: Colors.deepPurple,
-          elevation: 0,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
         body: Center(
           child: Container(
             height: 300,
@@ -29,7 +22,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.all(25),
-            child: Icon(Icons.favorite, color: Colors.white, size: 64),
+            child: Text("Mitch Koko"),
           ),
         ),
       ),
