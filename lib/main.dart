@@ -7,20 +7,27 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  List names = ["Mitch", "Sharon", "Vince"];
+  void userTapped() {
+    print("User tapped!");
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Stack(
-          alignment: Alignment.bottomRight,
-          children: [
-            Container(height: 300, width: 300, color: Colors.deepPurple),
-            Container(height: 200, width: 200, color: Colors.deepPurple[400]),
-            Container(height: 100, width: 100, color: Colors.deepPurple[200]),
-          ],
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              userTapped();
+            },
+            child: Container(
+              height: 300,
+              width: 300,
+              color: Colors.deepPurple,
+              child: Center(child: Text("Tap me!")),
+            ),
+          ),
         ),
       ),
     );
