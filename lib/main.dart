@@ -7,16 +7,17 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+  List names = ["Mitch", "Sharon", "Vince"];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Column(
-        children: [
-          Container(height: 350, color: Colors.deepPurple),
-          Container(height: 350, color: Colors.deepPurple[400]),
-          Container(height: 350, color: Colors.deepPurple[200]),
-        ],
+      home: Scaffold(
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(title: Text(names[index])),
+        ),
       ),
     );
   }
