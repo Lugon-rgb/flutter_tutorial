@@ -11,27 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          title: Text("My App"),
-          backgroundColor: Colors.deepPurple,
-          elevation: 0,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: EdgeInsets.all(25),
-            child: Icon(Icons.favorite, color: Colors.white, size: 64),
-          ),
-        ),
+      home: Column(
+        children: [
+          Container(height: 350, color: Colors.deepPurple),
+          Container(height: 350, color: Colors.deepPurple[400]),
+          Container(height: 350, color: Colors.deepPurple[200]),
+        ],
       ),
     );
   }
